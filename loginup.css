@@ -1,0 +1,21 @@
+body {
+  font-family: 'Note sans KR', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-size: cover;
+}
+
+.loginup {position: relative; z-index: 2;}
+.loginup h1 {
+  font-size: 32px; color: #000000;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.loginup h2 {
+  font-size: 32px; color: #000000;
+  text-align: center;
+  margin-bottom: 60px;
+}

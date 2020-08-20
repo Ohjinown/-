@@ -1,0 +1,66 @@
+<!--바탕화면에 들어가는 이벤트-->
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+  font-family: 'Note sans KR', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("1.png") no-repeat center;
+  background-size: cover;
+}
+body::before{
+  content: "";
+  position: absolute; z-index: 1;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0,0,0,.7);
+}
+.login-form {position: relative; z-index: 2;}
+.login-form h1 {
+  font-size: 32px; color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.int-area {width: 400px; position: relative;}
+.int-area input {
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  font-size: 20px; color: #fff;
+  outline: none;
+}
+.int-area label {
+  position: absolute; left: 10px; top: 15px;
+  font-size: 18px; color: #999;
+  transition: all .5s ease;
+}
+<!--이게 us pw를 눌렀을떄 반응이벤트-->
+.int-area input:focus + label,
+.int-area input:valid + label {
+  top: 0;
+  font-size: 13px; color: #166cea;
+}
+.btn-area {margin-top: 30px;}
+.btn-area button {
+  width: 100%; height: 30px;
+  background-color: #166cea;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+
+}
+.btn-area1 {margin-top: 30px;}
+.btn-area1 button {
+  width: 100%; height: 30px;
+  background-color: #166cea;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script type="text/javascript">
+      function loginup() {
+        location.href="loginup.html"
+      }
+      </script>
+  </head>
+  <body>
+    <section class="login-form">
+        <h1>스튜디오 반(studio rebel)</h1>
+        <form action="">
+            <div class="int-area" >
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">ID</label>
+            </div>
+            <div class="int-area" >
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">PASSWORD</label>
+            </div>
+            <div class="btn-area">
+                <button id="id"type="submit">Login</button>
+            </div>
+            <div class="btn-area1">
+                <button id="pw"type="button" onclick="loginup()">Sing up</button>
+            </div>
+        </form>
+    </section>
+    let id = $('#id');
+  </body>
+</html>

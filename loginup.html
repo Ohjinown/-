@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입 화면</title>
+   <!-- css 파일 분리 -->
+   <link href='loginup.css' rel='stylesheet' >
+   <script type="text/javascript">
+       // 필수 입력정보인 아이디, 비밀번호가 입력되었는지 확인하는 함수
+
+       function checkValue()
+       {
+           if(!document.userInfo.id.value){
+               alert("아이디를 입력하세요.");
+               return false;
+           }
+
+           if(!document.userInfo.password.value){
+               alert("비밀번호를 입력하세요.");
+               return false;
+           }
+
+           // 비밀번호와 비밀번호 확인에 입력된 값이 동일한지 확인
+           if(document.userInfo.password.value != document.userInfo.passwordcheck.value ){
+               alert("비밀번호를 동일하게 입력하세요.");
+               return false;
+           }
+       }
+       // 취소 버튼 클릭시 로그인 화면으로 이동
+       function web() {
+           location.href="web.html";
+       }
+   </script>
+</head>
+
+<body>
+    <section class="loginup">
+   <!-- div 왼쪽, 오른쪽 바깥여백을 auto로 주면 중앙정렬된다.  -->
+      <h1>스튜디오 반(studio rebel)</h1>
+      <h2>회원가입</h2>
+       <!-- 입력한 값을 전송하기 위해 form 태그를 사용한다 -->
+       <!-- 값(파라미터) 전송은 POST 방식, 전송할 페이지는 JoinPro.jsp -->
+               <form action="">
+
+           <table>
+               <tr>
+                   <td id="title">아이디</td>
+                   <td>
+                       <input type="text" name="id" maxlength="50">
+                       <input type="button" value="중복확인" >
+                   </td>
+               </tr>
+
+               <tr>
+                   <td class="password">비밀번호</td>
+                   <td>
+                       <input type=password name="password" maxlength="50">
+                   </td>
+               </tr>
+
+               <tr>
+                   <td>비밀번호 확인</td>
+                   <td>
+                       <input id="pwc"type="password" name="passwordcheck" maxlength="50">
+                       <button onclick="pw">보이기</button>
+                   </td>
+               </tr>
+
+               <tr>
+                   <td id="title">이름</td>
+                   <td>
+                       <input type="text" name="name" maxlength="50">
+                   </td>
+               </tr>
+               <tr>
+                   <td id="title">연령대</td>
+                   <td>
+                       <select name="age">
+                           <option value="">연령대</option>
+                           <option value="01" >10대</option>
+                           <option value="02" >20대</option>
+                           <option value="03" >30대</option>
+                           <option value="04" >40대</option>
+                           <option value="05" >50대</option>
+                           <option value="06" >60대</option>
+                           <option value="07" >70대</option>
+                           <option value="08" >80대</option>
+                           <option value="09" >90대</option>
+                       </select>
+                   </td>
+               </tr>
+
+               <tr>
+                   <td id="title">이메일</td>
+                   <td>
+                       <input type="text" name="mail1" maxlength="50">@
+                       <select name="mail">
+                           <option>naver.com</option>
+                           <option>daum.net</option>
+                           <option>gmail.com</option>
+                           <option>nate.com</option>
+                       </select>
+                   </td>
+               </tr>
+
+           </table>
+           <br>
+           <input class="login"type="submit" value="가입"/>
+           <input class="cancel"type="button" value="취소" onclick="web()">
+           </form>
+       </form>
+   </section>
+</body>
+</html>
